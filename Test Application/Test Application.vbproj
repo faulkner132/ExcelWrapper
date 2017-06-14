@@ -116,7 +116,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ExcelWrapper\ExcelWrapper.vbproj">
       <Project>{c57f4e9c-c1c7-4c79-b659-7e6d5fcb16b6}</Project>
-      <Name>Excel Driver</Name>
+      <Name>ExcelWrapper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
