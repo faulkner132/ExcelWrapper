@@ -12,13 +12,13 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Late-bound object for interacting with Excel that supports the most common actions with full intellisense comments available.")> 
 <Assembly: AssemblyCompany("Jason Faulkner")>
 <Assembly: AssemblyProduct("ExcelWrapper")>
-<Assembly: AssemblyCopyright("Copyright © Jason Faulkner 2017")>
+<Assembly: AssemblyCopyright("Copyright © Jason Faulkner 2019")>
 <Assembly: AssemblyTrademark("https://github.com/faulkner132/ExcelWrapper")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("7b73234b-4bb8-4051-a0db-790b0b194a68")> 
+<Assembly: Guid("7b73234b-4bb8-4051-a0db-790b0b194a68")>
 
 ' Version information for an assembly consists of the following four values:
 '
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("1.4.0.11196")> 
-<Assembly: AssemblyFileVersion("1.4.0.11196")> 
+<Assembly: AssemblyVersion("1.5.0.08249")>
+<Assembly: AssemblyFileVersion("1.5.0.08249")>

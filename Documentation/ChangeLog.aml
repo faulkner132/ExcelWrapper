@@ -21,6 +21,42 @@
     <!-- Add one or more top-level section elements.  These are collapsible.
          If using <autoOutline />, add an address attribute to identify it
          and specify a title so that it can be jumped to with a hyperlink. -->
+      <section address="Change5">
+        <title>1.5.0 on August 24, 2019.</title>
+        <content>
+          <para>
+            <legacyBold>Full build version = 1.5.0.08249</legacyBold>
+          </para>
+          <para>
+            <legacyItalic>Possible compatibility issue:</legacyItalic>
+            See Updates section below.
+          </para>
+          <para>New Methods:</para>
+          <list class="bullet">
+            <listItem>
+              <para>
+                <codeEntityReference qualifyHint="true">M:ExcelWrapper.Worksheet.GetValue``1(System.Int32,System.Object)</codeEntityReference>
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <codeEntityReference qualifyHint="true">M:ExcelWrapper.Worksheet.GetValue``1(System.String)</codeEntityReference>
+              </para>
+            </listItem>
+          </list>
+          <para>Updates:</para>
+          <list class="bullet">
+            <listItem>
+              <para>
+                <codeEntityReference qualifyHint="true">M:ExcelWrapper.Workbook.Save(System.String,ExcelWrapper.Constants.SaveFormat,System.String)</codeEntityReference>
+                Added support for the <codeEntityReference qualifyHint="true">F:ExcelWrapper.Constants.SaveFormat.AutoDetermine</codeEntityReference> save format.
+                This was set as the default save format.
+              </para>
+            </listItem>
+          </list>
+        </content>
+      </section>
+    
       <section address="Change4">
           <title>1.4.0 on November 19, 2016.</title>
           <content>
