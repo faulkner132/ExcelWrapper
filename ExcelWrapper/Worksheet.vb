@@ -194,6 +194,21 @@ Public Class Worksheet
     Public Function GetValue(row As Integer, column As Object) As Object
         Return _worksheet.Cells(row, column).Value
     End Function
+
+    ''' <summary>
+    ''' Returns the value of the specified cell as type <typeparamref name="T"/>. 
+    ''' If the value cannot be converted to the provided type then the default value of <typeparamref name="T"/>
+    ''' (or an empty string if <typeparamref name="T"/> is <see cref="String"/>) is returned.
+    ''' </summary>
+    ''' <typeparam name="T">Type to convert the value to.</typeparam>
+    ''' <param name="row"> Row. </param>
+    ''' <param name="column"> Column letter or number. </param>
+    ''' <returns>Value of the specified cell as <typeparamref name="T"/>, or the default value of <typeparamref name="T"/>.</returns>
+    ''' <remarks></remarks>
+    Public Function GetValue(Of T)(row As Integer, column As Object) As T
+        Return GetValue(Of T)(GetValue(row, column))
+    End Function
+
     ''' <summary>
     ''' Sets the value of the specified cell.
     ''' </summary>
@@ -214,6 +229,20 @@ Public Class Worksheet
     Public Function GetValue(location As String) As Object
         Return _worksheet.Range(location).Value
     End Function
+
+    ''' <summary>
+    ''' Returns the value of the specified cell as type <typeparamref name="T"/>. 
+    ''' If the value cannot be converted to the provided type then the default value of <typeparamref name="T"/>
+    ''' (or an empty string if <typeparamref name="T"/> is <see cref="String"/>) is returned.
+    ''' </summary>
+    ''' <typeparam name="T">Type to convert the value to.</typeparam>
+    ''' <param name="location">Cell location (e.g. A5, B22, AD32, etc.) or named reference.</param>
+    ''' <returns>Value of the specified cell as <typeparamref name="T"/>, or the default value of <typeparamref name="T"/>.</returns>
+    ''' <remarks></remarks>
+    Public Function GetValue(Of T)(location As String) As T
+        Return GetValue(Of T)(GetValue(location))
+    End Function
+
     ''' <summary>
     ''' Sets the value of the specified cell.
     ''' </summary>
@@ -223,6 +252,45 @@ Public Class Worksheet
     Public Sub SetValue(location As String, value As Object)
         _worksheet.Range(location).Value = value
     End Sub
+
+    ''' <summary>
+    ''' Helper method for <see cref="GetValue(Of T)(Integer, Object)"/> and <see cref="GetValue(Of T)(String)"/>
+    ''' </summary>
+    ''' <typeparam name="T">Target type to convert <paramref name="value"/>.</typeparam>
+    ''' <param name="value"> Value to convert. </param>
+    ''' <returns>
+    ''' Value of the specified cell as <typeparamref name="T"/>, or the default value of <typeparamref name="T"/>.
+    ''' </returns>
+    Private Function GetValue(Of T)(value As Object) As T
+
+        Dim returnValue As T
+
+        ' Handle null cases.
+        If value Is Nothing Then
+            If GetType(T) Is GetType(String) Then
+                Return Convert.ChangeType(String.Empty, GetType(T))
+            Else
+                Return returnValue
+            End If
+        End If
+
+        ' Apply special conversion rules.
+        If GetType(T) Is GetType(String) Then
+            value = value.ToString
+        ElseIf GetType(T) Is GetType(Boolean) Then
+            Boolean.TryParse(value.ToString, value)
+        End If
+
+        ' Attempt conversion to the requested type.
+        Try
+            returnValue = Convert.ChangeType(value, GetType(T))
+        Catch ex As Exception
+            ' Ignore conversion failure, use default value.
+        End Try
+
+        Return returnValue
+
+    End Function
 
 #End Region
 
