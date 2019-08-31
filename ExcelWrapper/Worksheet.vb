@@ -184,7 +184,8 @@ Public Class Worksheet
     End Sub
 
     ''' <summary>
-    ''' Returns the value of the specified cell.
+    ''' Returns the value of the specified cell as a raw object.
+    ''' If no value is present, this will be null.
     ''' </summary>
     ''' <param name="row">Row.</param>
     ''' <param name="column">Column letter or number.</param>
@@ -204,7 +205,8 @@ Public Class Worksheet
         _worksheet.Cells(row, column).Value = value
     End Sub
     ''' <summary>
-    ''' Returns the value of the specified cell.
+    ''' Returns the value of the specified cell as a raw object.
+    ''' If no value is present, this will be null.
     ''' </summary>
     ''' <param name="location">Cell location (e.g. A5, B22, AD32, etc.) or named reference.</param>
     ''' <returns>Static value of the specified cell. If there is no value, null is returned.</returns>

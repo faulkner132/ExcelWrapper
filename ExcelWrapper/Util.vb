@@ -1,5 +1,5 @@
 ﻿''' <summary>
-''' Miscellanous Excel related methods.
+''' Miscellaneous Excel related methods.
 ''' </summary>
 ''' <remarks></remarks>
 Public Class Util
@@ -86,7 +86,7 @@ Public Class Util
         Row = Convert.ToInt32(rowChars)
         Column = GetColumnNumber(columnChars)
 
-        ' If the index is now the same as the location lenght, it means all chars were processed.
+        ' If the index is now the same as the location length, it means all chars were processed.
         Return index = location.Length
 
     End Function

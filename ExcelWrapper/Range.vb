@@ -77,14 +77,13 @@ Public Class Range
 
     ''' <summary>
     ''' Gets or sets the value of the current range.
+    ''' <para>If the range is a single cell, the cell value is returned.
+    ''' Otherwise if the range is multiple cells, a 2D array of values is returned
+    ''' with the 0 index value being the column offset from the upper left most cell and the 1 index being the row offset.</para>
     ''' </summary>
     ''' <value>Value to set for all cells in the range.</value>
     ''' <returns>Current range value(s).</returns>
-    ''' <remarks>
-    ''' If the range is a single cell, the cell value is returned.
-    ''' Otherwise if the range is multiple cells, a 2D array of values is returned
-    ''' with the 0 index value being the column offset from the upper left most cell and the 1 index being the row offset.
-    ''' </remarks>
+    ''' <remarks></remarks>
     Public Property Value As Object
         Get
             Return _range.Value
@@ -96,14 +95,14 @@ Public Class Range
 
     ''' <summary>
     ''' Gets or sets the Excel formula of the current range.
+    ''' <para>If the range is a single cell, the cell formula is returned.
+    ''' Otherwise if the range is multiple cells, a 2D array of formulas is returned
+    ''' with the 0 index value being the column offset from the upper left most cell and the 1 index being the row offset.</para>
     ''' </summary>
     ''' <value>Formula to set for all cells in the range.</value>
     ''' <returns>Current range formula(s).</returns>
     ''' <remarks>
     ''' A static value can be provided for the value. Likewise, if the value is static, it is returned.
-    ''' If the range is a single cell, the cell formula is returned.
-    ''' Otherwise if the range is multiple cells, a 2D array of formulas is returned
-    ''' with the 0 index value being the column offset from the upper left most cell and the 1 index being the row offset.
     ''' </remarks>
     Public Property Formula As String
         Get
@@ -226,7 +225,7 @@ Public Class Range
     End Sub
 
     ''' <summary>
-    ''' Sets miscellanous range properties.
+    ''' Sets miscellaneous range properties.
     ''' </summary>
     ''' <param name="horizontalAlign">Horizontal text alignment to apply. Use 0 to ignore.</param>
     ''' <param name="verticalAlign">Vertical text alignment to apply. Use 0 to ignore.</param>

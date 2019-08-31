@@ -241,7 +241,7 @@ Public Class Excel
     End Function
 
     ''' <summary>
-    ''' Initalizes/resets the status bar displayed along the bottom of the Excel window.
+    ''' Initializes/resets the status bar displayed along the bottom of the Excel window.
     ''' If neither <paramref name="forceOn"/> or <paramref name="forceOff"/> are provided, display is toggled.
     ''' </summary>
     ''' <param name="forceOn">Specifies that the status bar should be reset to the default state and displayed.
