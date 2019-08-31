@@ -505,7 +505,7 @@ Public Class Worksheet
                 Next
             End With
 
-            .SetRange(If(sortRange Is Nothing, GetAllCells, sortRange).Object)
+            .SetRange(If(sortRange, GetAllCells()).Object)
             .Header = IIf(hasHeaders, 1, 2)
             .MatchCase = False
             .Orientation = 1 'xlTopToBottom

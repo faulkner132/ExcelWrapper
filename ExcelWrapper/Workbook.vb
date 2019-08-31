@@ -11,7 +11,7 @@ Public Class Workbook
     ''' Parent instance of <see cref="Excel"/>.
     ''' </summary>
     ''' <remarks></remarks>
-    Private _excel As Excel
+    Private ReadOnly _excel As Excel
 
     ''' <summary>
     ''' Raw Excel.Workbook object used by this wrapper.
