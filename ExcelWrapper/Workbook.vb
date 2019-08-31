@@ -304,14 +304,30 @@ Public Class Workbook
     ''' <summary>
     ''' Saves the current Excel workbook to disk.
     ''' </summary>
-    ''' <param name="fileName">Output file name.</param>
-    ''' <param name="format">Format to write the workbook as. Any 'XlFileFormat' value is accepted.</param>
-    ''' <param name="password">When provided, sets the protection password on the file. The Excel limit is 15 chars.</param>
+    ''' <param name="fileName">Output file name. This will set <see cref="FileName"/>.</param>
+    ''' <param name="format">Format to write the workbook as. Any 'XlFileFormat' value is accepted.
+    '''                      If <see cref="SaveFormat.AutoDetermine"/> is used,
+    '''                      then filenames ending in 'xls' or 'csv' are automatically saved in their respective format
+    '''                      with everything else using <see cref="SaveFormat.Default"/>. </param>
+    ''' <param name="password">When provided, sets the protection password on the file.
+    '''                        This is only applicable for native Excel formats. The Excel limit is 15 chars.</param>
     ''' <remarks></remarks>
     Public Sub Save(fileName As String,
-                    Optional format As Constants.SaveFormat = Constants.SaveFormat.Default,
+                    Optional format As SaveFormat = SaveFormat.AutoDetermine,
                     Optional password As String = "")
         _fileName = fileName
+
+        If format = SaveFormat.AutoDetermine Then
+            Select Case System.IO.Path.GetExtension(fileName).ToLower
+                Case ".csv"
+                    format = SaveFormat.CSV
+                Case ".xls"
+                    format = SaveFormat.Legacy
+                Case Else
+                    format = SaveFormat.Default
+            End Select
+        End If
+
         _workbook.SaveAs(fileName, FileFormat:=format, Password:=password)
     End Sub
 

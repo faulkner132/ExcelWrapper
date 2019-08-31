@@ -5,6 +5,7 @@
 Public Module Constants
 
     Public Enum SaveFormat As Integer
+        AutoDetermine = Integer.MinValue
         CSV = 6
         [Default] = 51
         Legacy = 39
