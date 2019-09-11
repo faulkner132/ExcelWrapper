@@ -21,6 +21,23 @@
     <!-- Add one or more top-level section elements.  These are collapsible.
          If using <autoOutline />, add an address attribute to identify it
          and specify a title so that it can be jumped to with a hyperlink. -->
+    <section address="Change6">
+      <title>1.5.1 on September 10, 2019.</title>
+      <content>
+        <para>
+          <legacyBold>Full build version = 1.5.1.09109</legacyBold>
+        </para>
+        <para>Fixes:</para>
+        <list class="bullet">
+          <listItem>
+            <para>
+              No code changes: previous build was against Debug instead of Release configuration.
+            </para>
+          </listItem>
+        </list>
+      </content>
+    </section>
+    
       <section address="Change5">
         <title>1.5.0 on August 24, 2019.</title>
         <content>
