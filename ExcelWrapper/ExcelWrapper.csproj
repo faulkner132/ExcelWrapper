@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net40;net6.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	  
+	<Version>2.0.0.04264</Version>
+	<AssemblyVersion>2.0.0.04264</AssemblyVersion>
+	<FileVersion>2.0.0.04264</FileVersion>
+	<Authors>Jason Faulkner</Authors>
+	<Product>ExcelWrapper</Product>
+	<Description>Late-bound library for interacting with Excel.</Description>
+	<Copyright>Copyright © 2024</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  
+</Project>
