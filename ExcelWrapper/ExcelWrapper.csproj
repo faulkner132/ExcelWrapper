@@ -13,6 +13,9 @@
 	<Product>ExcelWrapper</Product>
 	<Description>Late-bound library for interacting with Excel.</Description>
 	<Copyright>Copyright © 2024</Copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageProjectUrl>https://github.com/faulkner132/ExcelWrapper</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/faulkner132/ExcelWrapper</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net40' ">
