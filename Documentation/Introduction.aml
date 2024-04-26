@@ -36,7 +36,7 @@
                   </externalLink>
               </para>
             <para>
-              ExcelWrapper updates are available for download at
+              ExcelWrapper source is available at
               <externalLink>
                 <linkText>GitHub</linkText>
                 <linkUri>https://github.com/faulkner132/ExcelWrapper</linkUri>
@@ -60,7 +60,8 @@
         <autoOutline /> -->
           <list class="bullet">
               <listItem><para>Straight-forward get and set methods for values and formulas - specify by location (e.g. A1, B23, BA21, etc.) or cell row/column coordinates.</para></listItem>
-              <listItem><para>Full support for creating, opening, and saving workbooks.</para></listItem>
+			  <listItem><para>Methods for extracting values from cells using generics.</para></listItem>
+			  <listItem><para>Full support for creating, opening, and saving workbooks.</para></listItem>
               <listItem><para>Full support for adding, deleting, and moving worksheets.</para></listItem>
               <listItem><para>Support for common range operations such as setting borders, fonts, colors, and text formatting.</para></listItem>
               <listItem><para>Support for calling the native Excel Find function.</para></listItem>
@@ -69,7 +70,6 @@
               <listItem><para>Direct access to the underlying Excel COM objects to invoke any non-implemented functions.</para></listItem>
               <listItem><para>Implements IDisposable to prevent 'ghost' Excel instances.</para></listItem>
               <listItem><para>Full intellisense comments included.</para></listItem>
-              <listItem><para>Uses .NET 2.0 (for flexibility purposes).</para></listItem>
           </list>
       </content>
       
@@ -99,7 +99,7 @@
       </section>
 
     <relatedTopics>
-      <!-- One or more of the following:
+	    <!-- One or more of the following:
            - A local link
            - An external link
            - A code entity reference
@@ -121,9 +121,9 @@
       <link xlink:href="00e97994-e9e6-46e0-b420-5be86b2f8278">Some other topic</link>
 
       <externalLink>
-          <linkText>SHFB on CodePlex</linkText>
-          <linkAlternateText>Go to CodePlex</linkAlternateText>
-          <linkUri>http://shfb.codeplex.com</linkUri>
+          <linkText>SHFB on GitHub</linkText>
+          <linkAlternateText>Go to GitHub</linkAlternateText>
+          <linkUri>https://GitHub.com/EWSoftware/SHFB</linkUri>
       </externalLink>
 
       <codeEntityReference>T:TestDoc.TestClass</codeEntityReference>
