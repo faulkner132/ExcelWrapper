@@ -18,3 +18,6 @@ Supports common tasks for manipulating Excel data without requiring a reference 
 - Full intellisense comments included.
 
 _Note:_ While explicit references to Excel libraries are not required, this component does require that Excel is installed on any system which utilizes it. This library is not a replacement for Excel, it is a late-bound interface to the Excel COM objects.
+
+## Usage Sample
+See here: [Test Application/Program.cs](Test%20Application/Program.cs)
